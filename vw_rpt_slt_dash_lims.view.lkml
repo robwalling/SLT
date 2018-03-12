@@ -15,12 +15,12 @@ view: vw_rpt_slt_dash_lims {
     sql: ${TABLE}.ASSAY_DATE ;;
   }
 
-  dimension: assays_authorized {
+  measure: assays_authorized {
     type: number
     sql: ${TABLE}.ASSAYS_AUTHORIZED ;;
   }
 
-  dimension: assays_executed {
+  measure: assays_executed {
     type: number
     sql: ${TABLE}.ASSAYS_EXECUTED ;;
   }
