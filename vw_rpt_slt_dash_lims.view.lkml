@@ -16,12 +16,12 @@ view: vw_rpt_slt_dash_lims {
   }
 
   measure: assays_authorized {
-    type: number
+    type: sum
     sql: ${TABLE}.ASSAYS_AUTHORIZED ;;
   }
 
   measure: assays_executed {
-    type: number
+    type: sum
     sql: ${TABLE}.ASSAYS_EXECUTED ;;
   }
 
