@@ -45,13 +45,13 @@ view: vw_rpt_slt_dash_fin {
     sql: ${TABLE}.INSERTED_DATE ;;
   }
 
-  dimension: inv_sales_chv {
-    type: string
+  measure: inv_sales_chv {
+    type: sum
     sql: ${TABLE}.INV_SALES_CHV ;;
   }
 
-  dimension: inv_sales_usd {
-    type: string
+  measure: inv_sales_usd {
+    type: sum
     sql: ${TABLE}.INV_SALES_USD ;;
   }
 
