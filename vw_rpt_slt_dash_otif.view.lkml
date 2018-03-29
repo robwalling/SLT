@@ -113,8 +113,8 @@ view: vw_rpt_slt_dash_otif {
     sql: ${TABLE}.PROGRAM_MANAGER ;;
   }
 
-  dimension: zy_fcst_net_rev {
-    type: string
+  measure: zy_fcst_net_rev {
+    type: sum
     sql: ${TABLE}.ZY_FCST_NET_REV ;;
   }
 
