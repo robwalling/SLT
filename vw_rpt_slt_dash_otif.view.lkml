@@ -115,10 +115,13 @@ view: vw_rpt_slt_dash_otif {
 
   measure: zy_fcst_net_rev {
     type: sum
+    drill_fields: [OTIF*]
     value_format: "$#,##0"
     sql: ${TABLE}.ZY_FCST_NET_REV ;;
   }
-
+  set: OTIF{
+    fields: [asset_box, asset_box2, committed_date_date, customer,zy_fcst_net_rev,inserted_date,achieved_otif,achieved_otif_per,program_manager]
+  }
   measure: count {
     type: count
     drill_fields: [plant_name]
