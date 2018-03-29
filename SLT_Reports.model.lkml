@@ -7,7 +7,7 @@ explore: vw_rpt_slt_dash_eincident {}
 explore: vw_rpt_slt_dash_esafety {}
 explore: vw_rpt_slt_dash_fin {}
 explore: vw_rpt_slt_dash_lims {}
-explore: vw_rpt_slt_dash_otif {}
+
 # # Select the views that should be a part of this model,
 # # and define the joins that connect them together.
 #
