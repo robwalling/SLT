@@ -48,9 +48,12 @@ view: vw_rpt_slt_dash_fin {
   measure: forcast_net_rev_usd {
     type: sum
     value_format: "$#,##0"
+    drill_fields: [Fin*]
     sql: ${TABLE}.FORCAST_NET_REV_USD ;;
   }
-
+  set: Fin {
+    fields: [asset_box, asset_box2, commit_del_date, customer, customer_num,forcast_net_rev_chf,forcast_net_rev_usd,free_text,inserted_date,material1,material2,program_manager,rev_category,sales_rec_date,status,wbs_element,wbs_heirarchy]
+  }
   dimension: free_text {
     type: string
     sql: ${TABLE}.FREE_TEXT ;;
