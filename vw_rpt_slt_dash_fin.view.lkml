@@ -41,12 +41,12 @@ view: vw_rpt_slt_dash_fin {
   }
 
   measure: forcast_net_rev_chf {
-    type: number
+    type: sum
     sql: ${TABLE}.FORCAST_NET_REV_CHF ;;
   }
 
   measure: forcast_net_rev_usd {
-    type: number
+    type: sum
     sql: ${TABLE}.FORCAST_NET_REV_USD ;;
   }
 
