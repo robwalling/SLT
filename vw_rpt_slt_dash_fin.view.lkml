@@ -40,12 +40,12 @@ view: vw_rpt_slt_dash_fin {
     sql: ${TABLE}.CY_FCST_BATCH_COUNT ;;
   }
 
-  dimension: forcast_net_rev_chf {
+  measure: forcast_net_rev_chf {
     type: number
     sql: ${TABLE}.FORCAST_NET_REV_CHF ;;
   }
 
-  dimension: forcast_net_rev_usd {
+  measure: forcast_net_rev_usd {
     type: number
     sql: ${TABLE}.FORCAST_NET_REV_USD ;;
   }
