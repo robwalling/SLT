@@ -47,6 +47,7 @@ view: vw_rpt_slt_dash_fin {
 
   measure: forcast_net_rev_usd {
     type: sum
+    value_format: "$#,##0"
     sql: ${TABLE}.FORCAST_NET_REV_USD ;;
   }
 
