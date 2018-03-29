@@ -115,6 +115,7 @@ view: vw_rpt_slt_dash_otif {
 
   measure: zy_fcst_net_rev {
     type: sum
+    value_format: "$#,##0"
     sql: ${TABLE}.ZY_FCST_NET_REV ;;
   }
 
