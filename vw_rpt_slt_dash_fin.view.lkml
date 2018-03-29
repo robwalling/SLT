@@ -11,14 +11,18 @@ view: vw_rpt_slt_dash_fin {
     sql: ${TABLE}.ASSET_BOX2 ;;
   }
 
-  dimension: bus_desc {
-    type: string
-    sql: ${TABLE}.BUS_DESC ;;
-  }
-
-  dimension: bus_unit {
-    type: string
-    sql: ${TABLE}.BUS_UNIT ;;
+  dimension_group: commit_del {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.COMMIT_DEL_DATE ;;
   }
 
   dimension: customer {
@@ -29,6 +33,26 @@ view: vw_rpt_slt_dash_fin {
   dimension: customer_num {
     type: string
     sql: ${TABLE}.CUSTOMER_NUM ;;
+  }
+
+  dimension: cy_fcst_batch_count {
+    type: string
+    sql: ${TABLE}.CY_FCST_BATCH_COUNT ;;
+  }
+
+  dimension: forcast_net_rev_chf {
+    type: number
+    sql: ${TABLE}.FORCAST_NET_REV_CHF ;;
+  }
+
+  dimension: forcast_net_rev_usd {
+    type: number
+    sql: ${TABLE}.FORCAST_NET_REV_USD ;;
+  }
+
+  dimension: free_text {
+    type: string
+    sql: ${TABLE}.FREE_TEXT ;;
   }
 
   dimension_group: inserted {
@@ -45,24 +69,43 @@ view: vw_rpt_slt_dash_fin {
     sql: ${TABLE}.INSERTED_DATE ;;
   }
 
-  dimension: inv_sales_chv {
+  dimension: material1 {
     type: string
-    sql: ${TABLE}.INV_SALES_CHV ;;
+    sql: ${TABLE}.MATERIAL1 ;;
   }
 
-  dimension: inv_sales_usd {
+  dimension: material2 {
     type: string
-    sql: ${TABLE}.INV_SALES_USD ;;
+    sql: ${TABLE}.MATERIAL2 ;;
   }
 
-  dimension: inv_sales_wo_rak_chv {
+  dimension: program_manager {
     type: string
-    sql: ${TABLE}.INV_SALES_WO_RAK_CHV ;;
+    sql: ${TABLE}.PROGRAM_MANAGER ;;
   }
 
   dimension: rev_category {
     type: string
     sql: ${TABLE}.REV_CATEGORY ;;
+  }
+
+  dimension_group: sales_rec {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.SALES_REC_DATE ;;
+  }
+
+  dimension: status {
+    type: string
+    sql: ${TABLE}.STATUS ;;
   }
 
   dimension: wbs_element {
