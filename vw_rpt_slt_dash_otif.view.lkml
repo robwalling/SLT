@@ -8,19 +8,16 @@ view: vw_rpt_slt_dash_otif {
   dimension: On_Time_In_Full {
   case: {
     when: {
-      sql: ${TABLE}.ACHIEVED_OTIF = 1 ;;
+      sql: ${TABLE}.ACHIEVED_OTIF = "1" ;;
       label: "Yes"
     }
 
     when: {
-      sql: ${TABLE}.boolean_field = 0 ;;
+      sql: ${TABLE}.boolean_field = "0" ;;
       label: "No"
     }
 
-    when: {
-      sql: ${TABLE}.boolean_field = NULL ;;
-      label: "Null"
-    }
+
   }
 }
 
