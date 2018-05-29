@@ -6,6 +6,10 @@ view: vw_rpt_slt_dash_otif {
     sql: ${TABLE}.ACHIEVED_OTIF ;;
   }
 
+  dimension: ON_TIME_IN_FULL {
+    type: string
+    sql: ${TABLE}.ON_TIME_IN_FULL ;;
+  }
 
   dimension: achieved_otif_per {
     type: string
