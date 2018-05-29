@@ -5,16 +5,7 @@ view: vw_rpt_slt_dash_otif {
     type: string
     sql: ${TABLE}.ACHIEVED_OTIF ;;
   }
-  dimension:On_Time_In_Full{
-    case: {
-      when: {
-        sql: ${TABLE}.ACHIEVED_OTIF = "1" ;;
-        label: "Yes"
-      }
-      # possibly more when statements
-      else: "No"
-    }
-  }
+
 
   dimension: achieved_otif_per {
     type: string
